@@ -14,7 +14,7 @@ const windowHeight = Dimensions.get('window').height;
 const OlvidasteContrasena = () => {
 	return (
 		<ImageBackground
-			source={require('../../src/assets/contra.png')}
+			source={require('../../src/assets/images/contra.png')}
 			style={styles.imageBackground}
 			resizeMode='cover'
 		>

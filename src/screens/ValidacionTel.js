@@ -14,7 +14,7 @@ const windowHeight = Dimensions.get('window').height;
 const ValidacionTel = () => {
 	return (
 		<ImageBackground
-			source={require('../../src/assets/ghostb.png')}
+			source={require('../../src/assets/images/ghostb.png')}
 			style={styles.imageBackground}
 			resizeMode='cover'
 		>

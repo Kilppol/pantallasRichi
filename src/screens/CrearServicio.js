@@ -16,7 +16,7 @@ const windowHeight = Dimensions.get('window').height;
 const CrearServcio = () => {
 	return (
 		<ImageBackground
-			source={require('../../src/assets/crearServicio.png')}
+			source={require('../../src/assets/images/crearServicio.png')}
 			style={styles.imageBackground}
 			resizeMode='cover'
 		>
@@ -69,12 +69,12 @@ const CrearServcio = () => {
 						/>
 						<Text style={styles.textCodigo}>Ubicación</Text>
 						<Image
-							source={require('../../src/assets/Ubicacion.png')}
+							source={require('../../src/assets/images/Ubicacion.png')}
 							style={styles.image}
 						/>
 						<Text style={styles.textCodigo}>Foto</Text>
 						<Image
-							source={require('../../src/assets/casa.png')}
+							source={require('../../src/assets/images/casa.png')}
 							style={styles.image}
 						/>
 

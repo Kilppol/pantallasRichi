@@ -1,8 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import ValidacionTel from './src/screens/ValidaciónTel';
+import CrearServcio from './src/screens/CrearServicio';
+//import ValidacionTel from './src/screens/ValidaciónTel';
+//import OlvidasteContrasena from './src/screens/OlvidasteContrasena';
+
 export default function App() {
-	return <ValidacionTel />;
+	return <CrearServcio />;
 }
 
 const styles = StyleSheet.create({

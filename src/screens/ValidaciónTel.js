@@ -5,6 +5,8 @@ import {
 	ImageBackground,
 	StyleSheet,
 	Dimensions,
+	TouchableOpacity,
+	TextInput,
 } from 'react-native';
 
 const windowHeight = Dimensions.get('window').height;
@@ -14,7 +16,7 @@ const ValidacionTel = () => {
 		<ImageBackground
 			source={require('../../src/assets/ghostb.png')}
 			style={styles.imageBackground}
-			resizeMode='repeat'
+			resizeMode='cover'
 		>
 			{/* Cortina de color con opacidad */}
 			<View style={styles.overlay} />
@@ -31,6 +33,20 @@ const ValidacionTel = () => {
 						Te hemos enviado un código a tu teléfono
 					</Text>
 				</View>
+
+				{/* Contenedor para el texto Código y botón */}
+				<View style={styles.codigoContainer}>
+					<Text style={styles.textCodigo}>Código</Text>
+					<TextInput
+						placeholder='12345678'
+						style={styles.inputText}
+						autoCapitalize='none'
+						secureTextEntry={true}
+					/>
+					<TouchableOpacity style={styles.button}>
+						<Text style={styles.buttonText}>Validar</Text>
+					</TouchableOpacity>
+				</View>
 			</View>
 		</ImageBackground>
 	);
@@ -42,7 +58,7 @@ const styles = StyleSheet.create({
 	},
 	overlay: {
 		...StyleSheet.absoluteFillObject,
-		backgroundColor: 'rgba(0, 0, 0, 0.7)',
+		backgroundColor: 'rgba(0, 0, 0, 0.25)',
 	},
 	containerT: {
 		flex: 1,
@@ -50,15 +66,15 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 	},
 	containerS: {
-		flex: 1,
 		width: 300,
 		justifyContent: 'center',
 		alignItems: 'center',
 		marginTop: -250,
+		marginBottom: 100,
 	},
 	titleContainer: {
 		position: 'absolute',
-		top: windowHeight * 0.1, // Ajusta la posición vertical del título
+		top: windowHeight * 0.1,
 		justifyContent: 'center',
 		alignItems: 'center',
 	},
@@ -73,6 +89,46 @@ const styles = StyleSheet.create({
 		color: 'white',
 		fontWeight: 'bold',
 		textAlign: 'center',
+	},
+	codigoContainer: {
+		alignItems: 'center',
+		marginBottom: -150,
+		backgroundColor: '#fff',
+		width: 300,
+		borderRadius: 20,
+		padding: 10,
+	},
+	textCodigo: {
+		fontSize: 20,
+		color: 'black',
+		fontWeight: 'bold',
+		textAlign: 'center',
+	},
+	button: {
+		width: 200,
+		height: 60,
+		borderRadius: 20,
+		alignItems: 'center',
+		justifyContent: 'center',
+		backgroundColor: '#E6303C',
+		color: '#090808',
+		marginTop: 20,
+	},
+	buttonText: {
+		color: '#fff',
+		fontSize: 18,
+		fontWeight: 'bold',
+	},
+	inputText: {
+		height: 60,
+		backgroundColor: '#F8F8F8',
+		borderRadius: 20,
+		padding: 15,
+		marginTop: 15,
+		paddingStart: 20,
+		borderColor: '#000', // Cambia el color del borde aquí
+		borderWidth: 2, // Asegúrate de especificar el ancho del borde
+		width: 200,
 	},
 });
 
